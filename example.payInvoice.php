@@ -15,7 +15,28 @@ $paymentOptions = array("payment_request" => "lntb15u1pd7mvympp5k4e3egmfrrszrgyt
 try {
 	$response = $lnd->request('channels/transactions',$paymentOptions);
 
-	if($response->error){
+	if(!$response->error){
+
+		# if no error detected, output successfuly payment details
+		echo $response->payment_preimage 	. "\n";
+		echo $response->total_fees_msat		. "\n";
+		echo $response->total_amt_msat		. "\n";
+
+		$paymentRoute = $response->payment_route;
+
+		echo $paymentRoute->total_amt 		. "\n";
+		echo $paymentRoute->total_fees		. "\n";
+
+		foreach($paymentRoute->hops as $hop){
+			echo $hop->chan_id 				. "\n";
+			echo $hop->chan_capacity 		. "\n";
+			echo $hop->amt_to_forward 		. "\n";
+			echo $hop->fee					. "\n";
+			echo $hop->amt_to_forward_msat	. "\n";
+			echo $hop->fee_msat				. "\n";
+		}
+
+	}else{
 		echo $response->error;
 	}
 
