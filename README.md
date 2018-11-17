@@ -18,9 +18,9 @@ Include the class in your PHP project:
 ## usage
 Instantiate a new LND object then set both the macaroon path and LND host information.
 
-`$lnd = new lnd();
-$lnd->setHost('86.122.84.24:8080');
-$lnd->loadMacaroon('../admin.macaroon');`
+`$lnd = new lnd();`
+`$lnd->setHost('86.122.84.24:8080');`
+`$lnd->loadMacaroon('../admin.macaroon');`
 
 You're now ready to begin making API requests. 
 See this repositories `example..php` files for basic examples of working with LND.  
