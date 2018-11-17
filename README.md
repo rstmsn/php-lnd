@@ -8,6 +8,7 @@ The class has no dependencies and should run on all recent versions of PHP.
 When instantiating a new instance of the class, you should provide a path to a macaroon file.
 Macaroons are like cookies, and are used by LND to authenticate all incoming API requests.
 As such, you should ensure this file is stored securely. outside of any publicly accessible directory. 
+
 For more information on macaroon usage within LND, see https://github.com/lightningnetwork/lnd/blob/master/docs/macaroons.md 
 
 ## installation
