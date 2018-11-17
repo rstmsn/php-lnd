@@ -28,12 +28,12 @@ try {
 		echo $paymentRoute->total_fees		. "\n";
 
 		foreach($paymentRoute->hops as $hop){
-			echo $hop->chan_id 				. "\n";
-			echo $hop->chan_capacity 		. "\n";
-			echo $hop->amt_to_forward 		. "\n";
-			echo $hop->fee					. "\n";
+			echo $hop->chan_id 		. "\n";
+			echo $hop->chan_capacity 	. "\n";
+			echo $hop->amt_to_forward 	. "\n";
+			echo $hop->fee			. "\n";
 			echo $hop->amt_to_forward_msat	. "\n";
-			echo $hop->fee_msat				. "\n";
+			echo $hop->fee_msat		. "\n";
 		}
 
 	}else{
