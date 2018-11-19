@@ -12,7 +12,7 @@ $lnd->loadMacaroon('../../admin.macaroon');
  */
 
 $invoiceOptions = array("memo" 	=> "1 Starblocks Coffee",
-						"value" => "480000");
+			"value" => "480000");
 
 try {
 	$paymentReq = $lnd->request('invoices',$invoiceOptions)->payment_request;
