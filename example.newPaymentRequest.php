@@ -15,7 +15,10 @@ $invoiceOptions = array("memo" 	=> "1 Starblocks Coffee",
 						"value" => "480000");
 
 try {
-	$paymentReq = $lnd->request('invoices',$invoiceOptions)->payment_request;
+	$request = $lnd->request('invoices',$invoiceOptions);
+
+	$paymentReq = $request->payment_request;
+	$paymentHash = $request->r_hash;
 
 	echo $paymentReq;
 	echo "<img src=\"https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=" . $paymentReq . "\">";
