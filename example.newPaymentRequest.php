@@ -11,8 +11,8 @@ $lnd->loadMacaroon('../../admin.macaroon');
  * Also generates a QR Code Payment Request Representation using Googles Chart API
  */
 
-$invoiceOptions = array("memo" 	=> "1 Starblocks Coffee",
-						"value" => "480000");
+$invoiceOptions = array("memo"	=> "1 Starblocks Coffee",
+			"value"	=> "480000");
 
 try {
 	$request = $lnd->request('invoices',$invoiceOptions);
