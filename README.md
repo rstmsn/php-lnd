@@ -1,5 +1,5 @@
 # php-lnd
-A basic PHP class for interfacing with LNDs REST API using cURL.
+A basic PHP class for interacting with the Bitcoin Lightning Network Daemon (LND) REST API using cURL.
 
 This class provides a basic example for communicating with the Lightning Network Daemon from within PHP.
 Requests are sent synchronously using cURL. SSL/TLS is optional.
