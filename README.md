@@ -11,6 +11,8 @@ As such, you should ensure this file is stored securely. outside of any publicly
 
 For more information on macaroon usage within LND, see https://github.com/lightningnetwork/lnd/blob/master/docs/macaroons.md 
 
+![PHP-lnd-example](http://rosstitute.co.uk/lnd/php-lnd.png)
+
 ## installation
 Include the class in your PHP project:
 
